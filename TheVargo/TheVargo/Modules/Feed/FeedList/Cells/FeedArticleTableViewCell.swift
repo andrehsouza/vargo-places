@@ -8,12 +8,14 @@
 
 import UIKit
 import AlamofireImage
+import HCSStarRatingView
 
 class FeedArticleTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var cellTitleLabel: UILabel!
     @IBOutlet weak var cellCardView: VCardView!
+    @IBOutlet weak var cellRatingStars: HCSStarRatingView!
     
     var item: PlaceItemInterface? {
         didSet {
@@ -24,6 +26,7 @@ class FeedArticleTableViewCell: UITableViewCell {
             }
             
             cellTitleLabel.text = item?.title
+            cellRatingStars.value = CGFloat(item?.rating ?? 0)
         }
     }
 

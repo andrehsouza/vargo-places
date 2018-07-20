@@ -10,8 +10,8 @@ import Foundation
 
 struct Feed: Decodable {
     
-    var nextPage: String
-    var results: [Place]
+    var nextPage: String?
+    var results: [Place]?
     
     enum CodingKeys: String, CodingKey {
         case nextPage = "next_page_token"

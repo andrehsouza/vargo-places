@@ -9,6 +9,7 @@ def shared_pods
     pod 'GooglePlaces'
     pod 'GooglePlacePicker'
     pod 'GoogleMaps'
+    pod 'HCSStarRatingView', '~> 1.5'
     
 end
 

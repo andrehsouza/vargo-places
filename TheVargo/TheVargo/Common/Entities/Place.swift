@@ -10,8 +10,8 @@ import Foundation
 
 struct Place: Decodable {
     
-    var place_id: String
-    var name: String
+    var place_id: String?
+    var name: String?
     var geometry: Geometry?
     var rating: Float?
     var photos: [Photo]?

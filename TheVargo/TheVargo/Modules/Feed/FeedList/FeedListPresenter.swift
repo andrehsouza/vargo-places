@@ -63,7 +63,8 @@ extension FeedListPresenter: FeedListPresenterInterface {
     }
     
     func didSelectItem(at indexPath: IndexPath) {
-        _wireframe.navigate(to: .detail(_results[indexPath.row].place_id))
+        guard let placeID = _results[indexPath.row].place_id else { return }
+        _wireframe.navigate(to: .detail(placeID))
     }
     
 }
@@ -97,8 +98,12 @@ extension FeedListPresenter {
     }
     
     private func incrementFeed(_ feed: Feed) {
-        _nexPageToken = feed.nextPage
-        _results.append(contentsOf: feed.results)
+        if let nextPage = feed.nextPage {
+            _nexPageToken = nextPage
+        }
+        if let results = feed.results {
+            _results.append(contentsOf: results)
+        }
     }
     
 }
