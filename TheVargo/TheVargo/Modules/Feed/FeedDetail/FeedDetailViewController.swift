@@ -28,6 +28,10 @@ final class FeedDetailViewController: VBaseViewController {
     
     @IBOutlet weak var placeMapImage: UIImageView!
     
+    @IBOutlet weak var placeWebsiteLabel: UILabel!
+    @IBOutlet weak var placeWebsiteValueLabel: UIButton!
+    
+    
 
     // MARK: - Public properties -
   
@@ -85,6 +89,8 @@ extension FeedDetailViewController: FeedDetailViewInterface {
         placePhoneLbl.text = item?.phoneTitle
         placePhoneValueLbl.text = item?.phone
         
+        placeWebsiteLabel.text = item?.websiteTitle
+        placeWebsiteValueLabel.setTitle(item?.website, for: .normal)
     
     }
     

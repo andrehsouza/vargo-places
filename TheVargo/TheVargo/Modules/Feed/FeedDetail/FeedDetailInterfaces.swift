@@ -39,4 +39,6 @@ protocol PlaceDetailInterface: PlaceItemInterface {
     var address: String? { get }
     var phoneTitle: String? { get }
     var phone: String? { get }
+    var websiteTitle: String { get }
+    var website: String? { get }
 }

@@ -17,6 +17,7 @@ struct Place: Decodable {
     var photos: [Photo]?
     var address: String?
     var phone: String?
+    var website: String?
     
     enum CodingKeys: String, CodingKey {
         case place_id
@@ -26,6 +27,7 @@ struct Place: Decodable {
         case geometry
         case photos
         case rating
+        case website
     }
     
 }
@@ -49,7 +51,11 @@ extension Place: PlaceDetailInterface {
     }
     
     var phoneTitle: String? {
-        return "Phone"
+        return self.phone != nil ? "Phone" : ""
+    }
+    
+    var websiteTitle: String {
+        return self.website != nil ? "Website" : ""
     }
     
     var location: Location? {

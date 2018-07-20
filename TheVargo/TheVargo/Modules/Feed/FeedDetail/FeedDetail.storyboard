@@ -175,6 +175,24 @@
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uBo-h6-rBU">
+                                                                <rect key="frame" x="0.0" y="245" width="339" height="105"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5u-TD-hhK">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="339" height="50"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptC-8Y-dpM">
+                                                                        <rect key="frame" x="147" y="38" width="47" height="29"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                        <state key="normal" title="Button">
+                                                                            <color key="titleColor" red="0.6423981245" green="0.77355966610000004" blue="0.74461554929999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </state>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -248,6 +266,8 @@
                         <outlet property="placePhoneLbl" destination="cbt-Mf-Y7m" id="K1Y-Hr-psH"/>
                         <outlet property="placePhoneValueLbl" destination="RK2-Jc-r5z" id="uIV-7z-J0s"/>
                         <outlet property="placeRatingView" destination="mJd-pS-Y8r" id="POh-EI-edG"/>
+                        <outlet property="placeWebsiteLabel" destination="O5u-TD-hhK" id="56r-xB-Emx"/>
+                        <outlet property="placeWebsiteValueLabel" destination="ptC-8Y-dpM" id="KHa-iX-4Kk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Atu-ee-BoV" userLabel="First Responder" sceneMemberID="firstResponder"/>

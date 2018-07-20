@@ -44,6 +44,7 @@ extension FeedDetailPresenter: FeedDetailPresenterInterface {
     }
     
     func setPlaceDetailFromSplitViewController(_ placeId: String) {
+        self._placeId = placeId
         _getDetail()
     }
 

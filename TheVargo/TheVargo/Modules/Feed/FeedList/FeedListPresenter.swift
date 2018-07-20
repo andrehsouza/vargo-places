@@ -19,6 +19,7 @@ final class FeedListPresenter: NSObject {
     private let _interactor: FeedListInteractorInterface
     private let _wireframe: FeedListWireframeInterface
 
+    private var _isLoadingMoreItems: Bool = false
     private var _nexPageToken: String = ""
     private var _results: [Place] = []
 
@@ -45,9 +46,12 @@ extension FeedListPresenter: FeedListPresenterInterface {
     
     func _loadMoreItems() {
         guard let currentLocation = LocationService.sharedInstance.locationManager.location else { return }
-        _interactor.getFeed(location: currentLocation, pagetoken: _nexPageToken, completion: { [weak self] result in
-            self?._handleFeedResult(result)
-        })
+        if !_isLoadingMoreItems {
+            _isLoadingMoreItems = true
+            _interactor.getFeed(location: currentLocation, pagetoken: _nexPageToken, completion: { [weak self] result in
+                self?._handleFeedResult(result)
+            })
+        }
     }
     
     func numberOfSections() -> Int {
@@ -84,6 +88,7 @@ extension FeedListPresenter {
     }
     
     private func _handleFeedResult(_ result: RequestResultType<Feed>) {
+        _isLoadingMoreItems = false
         switch result {
         case .success(let feed):
             incrementFeed(feed)
