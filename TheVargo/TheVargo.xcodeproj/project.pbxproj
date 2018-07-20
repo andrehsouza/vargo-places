@@ -58,8 +58,8 @@
 		7BA7F5D921018A8C00A217CF /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F5D821018A8C00A217CF /* Place.swift */; };
 		7BA7F5DB21018D5600A217CF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F5DA21018D5600A217CF /* Location.swift */; };
 		7BA7F5DD2101940700A217CF /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F5DC2101940700A217CF /* Photo.swift */; };
-		7BA7F5DF2101A14800A217CF /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F5DE2101A14800A217CF /* PlaceDetail.swift */; };
 		7BA7F5E12101A8CA00A217CF /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F5E02101A8CA00A217CF /* Geometry.swift */; };
+		7BA7F5E32101BAE400A217CF /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F5E22101BAE400A217CF /* DetailService.swift */; };
 		7BD90FE020EFA631003E2DCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */; };
 		7BD90FE320EFA631003E2DCE /* TheVargo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FE120EFA631003E2DCE /* TheVargo.xcdatamodeld */; };
 		7BD90FEC20EFA633003E2DCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD90FEB20EFA633003E2DCE /* Assets.xcassets */; };
@@ -149,8 +149,8 @@
 		7BA7F5D821018A8C00A217CF /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		7BA7F5DA21018D5600A217CF /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		7BA7F5DC2101940700A217CF /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		7BA7F5DE2101A14800A217CF /* PlaceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetail.swift; sourceTree = "<group>"; };
 		7BA7F5E02101A8CA00A217CF /* Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
+		7BA7F5E22101BAE400A217CF /* DetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailService.swift; sourceTree = "<group>"; };
 		7BD90FDC20EFA631003E2DCE /* TheVargo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheVargo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BD90FE220EFA631003E2DCE /* TheVargo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheVargo.xcdatamodel; sourceTree = "<group>"; };
@@ -282,6 +282,7 @@
 			children = (
 				7B62BA3020F6A26C001E848B /* APIService.swift */,
 				7B62BA2C20F69E95001E848B /* FeedService.swift */,
+				7BA7F5E22101BAE400A217CF /* DetailService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -362,7 +363,6 @@
 				7BA7F5E02101A8CA00A217CF /* Geometry.swift */,
 				7BA7F5DA21018D5600A217CF /* Location.swift */,
 				7BA7F5DC2101940700A217CF /* Photo.swift */,
-				7BA7F5DE2101A14800A217CF /* PlaceDetail.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -715,7 +715,6 @@
 				30D2C79820F458B600B9A3BB /* UINavigationController+Extension.swift in Sources */,
 				307F368920F9925D0071DCB8 /* UICollectionViewCell+Extension.swift in Sources */,
 				7B64585F20F3AA1F0016557C /* FeedListWireframe.swift in Sources */,
-				7BA7F5DF2101A14800A217CF /* PlaceDetail.swift in Sources */,
 				7B54730020F78F7200AB0278 /* UITableView+Extension.swift in Sources */,
 				7B6458B020F3FF9B0016557C /* VBaseViewController.swift in Sources */,
 				7B64586820F3AA580016557C /* FeedDetailInteractor.swift in Sources */,
@@ -761,6 +760,7 @@
 				7B64586620F3AA580016557C /* FeedDetailPresenter.swift in Sources */,
 				7B64586920F3AA580016557C /* FeedDetailWireframe.swift in Sources */,
 				307F367D20F8162F0071DCB8 /* ThemeInitializer.swift in Sources */,
+				7BA7F5E32101BAE400A217CF /* DetailService.swift in Sources */,
 				7B64585B20F3AA1F0016557C /* FeedListInterfaces.swift in Sources */,
 				7BD9102820EFB671003E2DCE /* InteractorInterface.swift in Sources */,
 				307F367720F6E1280071DCB8 /* VUrl.swift in Sources */,

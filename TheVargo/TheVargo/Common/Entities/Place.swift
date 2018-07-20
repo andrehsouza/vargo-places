@@ -15,6 +15,13 @@ struct Place: Decodable {
     var geometry: Geometry?
     var rating: Float?
     var photos: [Photo]?
+    var address: String?
+    var phone: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case address = "formatted_address"
+        case phone = "formatted_phone_number"
+    }
     
 }
 
@@ -28,4 +35,12 @@ extension Place: PlaceItemInterface {
         return photos?[0].photo_reference
     }
         
+}
+
+extension Place: PlaceDetailInterface {
+    
+    var location: Location? {
+        return geometry?.location
+    }
+    
 }

@@ -12,7 +12,7 @@ import Foundation
 
 final class FeedDetailInteractor {
     
-//    fileprivate let relatedVideoService = RelatedVideoService()
+    fileprivate let detailService = DetailService()
     
 }
 
@@ -20,6 +20,8 @@ final class FeedDetailInteractor {
 
 extension FeedDetailInteractor: FeedDetailInteractorInterface {
     
-    
+    func get(placeId: String, completion: @escaping (RequestResultType<Place>) -> Void) {
+        detailService.get(placeId, completion)
+    }
     
 }

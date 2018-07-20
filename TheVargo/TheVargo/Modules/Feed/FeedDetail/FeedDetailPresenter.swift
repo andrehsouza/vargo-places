@@ -20,7 +20,7 @@ final class FeedDetailPresenter {
     private let _wireframe: FeedDetailWireframeInterface
     
     private var _placeId: String?
-    private var _place: PlaceDetail?
+    private var _place: Place?
 
     // MARK: - Lifecycle -
 
@@ -39,14 +39,38 @@ final class FeedDetailPresenter {
 
 extension FeedDetailPresenter: FeedDetailPresenterInterface {
     
-
+    func viewDidLoad() {
+        _getDetail()
+    }
     
+    func setPlaceDetailFromSplitViewController(_ placeId: String) {
+        _getDetail()
+    }
+
 }
 
 // MARK: - Extensions -
 
 extension FeedDetailPresenter {
     
+    @objc private func _getDetail() {
+        guard let placeId = _placeId else { return }
+        _view.showLoading(true)
+        _interactor.get(placeId: placeId, completion: { [weak self] result in
+            self?._handleFeedResult(result)
+        })
+    }
     
-    
+    private func _handleFeedResult(_ result: RequestResultType<Place>) {
+        switch result {
+        case .success(let place):
+            _view.showLoading(false)
+            self._place = place
+            _view.showPlaceInfo(place)
+            break
+        case .failure(let errorResponse):
+            _view.showError(error: errorResponse, target: self, action: #selector(self._getDetail))
+            break
+        }
+    }
 }

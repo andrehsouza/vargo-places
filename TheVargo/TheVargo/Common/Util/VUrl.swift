@@ -10,12 +10,14 @@ import Foundation
 import CoreLocation
 
 let SERVER_URL = "https://maps.googleapis.com/maps/api/place"
+
 private let SEARCH_PARAMETERS = "radius=5000&keyword=bookstore"
 
 enum EndPoints {
     
     case nearbysearch(location: CLLocation, pagetoken: String)
     case imageUrl(photoReference: String)
+    case detail(placeId: String)
     
     var complement: String {
         switch self {
@@ -24,6 +26,8 @@ enum EndPoints {
             return "/nearbysearch/json?location=\(location.coordinate.latitude),\(location.coordinate.longitude)&\(SEARCH_PARAMETERS)&key=\(Constants.PLACES_API)\(nextPageString)"
         case .imageUrl(let photoReference):
             return "\(SERVER_URL)/photo?maxwidth=600&photoreference=\(photoReference)&key=\(Constants.PLACES_API)"
+        case .detail(let placeId):
+            return "\(SERVER_URL)/details/json?key=\(placeId)"
         }
     }
     

@@ -36,22 +36,22 @@ extension FeedListWireframe: FeedListWireframeInterface {
     func navigate(to option: FeedListNavigationOption) {
         switch option {
         case .detail(let placeId):
-//            _openFeedDetail(with: feedContent)
+            _openFeedDetail(with: placeId)
             break
         }
     }
     
-//    private func _openFeedDetail(with feedContent: FeedContent) {
-//        if let split = viewController.splitViewController {
-//            let controllers = split.viewControllers
-//            if split.isCollapsed {
-//                navigationController?.pushWireframe(FeedDetailWireframe(feedContent: feedContent))
-//            } else {
-//                let detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? FeedDetailViewController
-//                detailViewController?.presenter.setFeedDetailFromSplitViewController(feedContent)
-//            }
-//        } else {
-//          navigationController?.pushWireframe(FeedDetailWireframe(feedContent: feedContent))
-//        }
-//    }
+    private func _openFeedDetail(with placeId: String) {
+        if let split = viewController.splitViewController {
+            let controllers = split.viewControllers
+            if split.isCollapsed {
+                navigationController?.pushWireframe(FeedDetailWireframe(placeId: placeId))
+            } else {
+                let detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? FeedDetailViewController
+                detailViewController?.presenter.setPlaceDetailFromSplitViewController(placeId)
+            }
+        } else {
+          navigationController?.pushWireframe(FeedDetailWireframe(placeId: placeId))
+        }
+    }
 }

@@ -78,6 +78,47 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLT-jD-cMr">
+                                                                <rect key="frame" x="49" y="88" width="240" height="128"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Egu-cJ-SC1" customClass="HCSStarRatingView">
+                                                                        <rect key="frame" x="-41" y="45" width="322" height="37"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="tintColor" red="0.96078431369999995" green="0.72156862749999995" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="85" id="Gkk-py-edR"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                                                <integer key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                                                <real key="value" value="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                                                <real key="value" value="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                                                                <real key="value" value="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="allowsHalfStars" value="YES"/>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyStarColor">
+                                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="starBorderColor">
+                                                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="Egu-cJ-SC1" firstAttribute="leading" secondItem="kLT-jD-cMr" secondAttribute="leading" id="NQv-CZ-v4y"/>
+                                                                    <constraint firstItem="Egu-cJ-SC1" firstAttribute="top" secondItem="kLT-jD-cMr" secondAttribute="top" id="k2V-4R-dBK"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="Egu-cJ-SC1" secondAttribute="bottom" id="t9c-Bg-l7j"/>
+                                                                    <constraint firstAttribute="height" constant="15" id="xQ8-GF-Q57"/>
+                                                                </constraints>
+                                                            </view>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YlI-mA-pL3">
                                                                 <rect key="frame" x="0.0" y="70" width="339" height="10"/>
                                                                 <subviews>
@@ -121,16 +162,12 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gqA-W0-Cdj">
-                                                                        <rect key="frame" x="0.0" y="50" width="339" height="30"/>
-                                                                        <color key="tintColor" red="0.43181888972812393" green="0.5199854473039216" blue="0.50052926294665745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <state key="normal">
-                                                                            <attributedString key="attributedTitle"/>
-                                                                        </state>
-                                                                        <connections>
-                                                                            <action selector="touchURL:" destination="MHA-0Q-rzW" eventType="touchUpInside" id="CNT-bW-c2Q"/>
-                                                                        </connections>
-                                                                    </button>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A5W-7P-8gf">
+                                                                        <rect key="frame" x="49" y="-24" width="240" height="128"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="200" id="yz2-lK-a2a"/>
+                                                                        </constraints>
+                                                                    </imageView>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
@@ -198,14 +235,15 @@
                     <navigationItem key="navigationItem" title="Detalhe" id="J1n-hu-Qfs"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="feedItemAuthorsLabel" destination="RK2-Jc-r5z" id="l1k-Dv-bza"/>
-                        <outlet property="feedItemAuthorsTitleLabel" destination="cbt-Mf-Y7m" id="70F-cQ-T4Z"/>
-                        <outlet property="feedItemDateLabel" destination="1Rs-Bp-D3q" id="LWx-ls-LEY"/>
-                        <outlet property="feedItemDescriptionLabel" destination="I9M-OE-2aB" id="hHo-xh-7wq"/>
-                        <outlet property="feedItemFontTitleLabel" destination="ju0-jS-Agc" id="Y2P-UL-Zhg"/>
-                        <outlet property="feedItemImageView" destination="CvI-M2-leb" id="vYr-RG-hR3"/>
-                        <outlet property="feedItemTitleLabel" destination="uwu-w4-9tJ" id="ikf-N6-cEn"/>
-                        <outlet property="feedItemUrlButton" destination="gqA-W0-Cdj" id="xXS-9r-6eA"/>
+                        <outlet property="placeAddressLbl" destination="uwu-w4-9tJ" id="y1e-aL-L2z"/>
+                        <outlet property="placeAddressValueLbl" destination="I9M-OE-2aB" id="3Dy-lM-Vap"/>
+                        <outlet property="placeImageView" destination="CvI-M2-leb" id="r1u-Jm-bBg"/>
+                        <outlet property="placeMapImage" destination="A5W-7P-8gf" id="uHl-dC-lmM"/>
+                        <outlet property="placeMapTitleLabel" destination="ju0-jS-Agc" id="ZXk-Lb-zVG"/>
+                        <outlet property="placeNameLabel" destination="1Rs-Bp-D3q" id="O7W-lw-WHs"/>
+                        <outlet property="placePhoneLbl" destination="cbt-Mf-Y7m" id="K1Y-Hr-psH"/>
+                        <outlet property="placePhoneValueLbl" destination="RK2-Jc-r5z" id="uIV-7z-J0s"/>
+                        <outlet property="placeRatingView" destination="Egu-cJ-SC1" id="WLH-CH-c9n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Atu-ee-BoV" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,36 +10,26 @@
 
 import UIKit
 import AlamofireImage
+import HCSStarRatingView
 
+final class FeedDetailViewController: VBaseViewController {
+    
 
-final class FeedDetailViewController: UIViewController {
+    @IBOutlet weak var placeImageView: VImageView!
     
-    @IBOutlet weak var feedItemBookmarkButton: UIButton!
+    @IBOutlet weak var placeNameLabel: UILabel!
+    @IBOutlet weak var placeRatingView: HCSStarRatingView!
     
-    @IBOutlet weak var feedItemImageView: VImageView!
-    @IBOutlet weak var feedItemPlayerImageView: UIButton!
+    @IBOutlet weak var placeAddressLbl: UILabel!
+    @IBOutlet weak var placeAddressValueLbl: UILabel!
     
-    @IBOutlet weak var feedItemDateLabel: UILabel!
+    @IBOutlet weak var placePhoneLbl: UILabel!
+    @IBOutlet weak var placePhoneValueLbl: UILabel!
     
-    @IBOutlet weak var feedItemTitleLabel: UILabel!
-    @IBOutlet weak var feedItemDescriptionLabel: UILabel!
+    @IBOutlet weak var placeMapTitleLabel: UILabel!
+    @IBOutlet weak var placeMapImage: UIImageView!
     
-    @IBOutlet weak var feedItemAuthorsTitleLabel: UILabel!
-    @IBOutlet weak var feedItemAuthorsLabel: UILabel!
-    
-    @IBOutlet weak var feedItemFontTitleLabel: UILabel!
-    @IBOutlet weak var feedItemUrlButton: UIButton!
-    
-    @IBOutlet weak var feedRelatedVideosContainerHeight: NSLayoutConstraint!
-    @IBOutlet weak var feedRelatedVideosContainerBottom: NSLayoutConstraint!
-    @IBOutlet weak var feedRelatedVideosContainer: UIView!
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    @IBOutlet weak var feedRelatedVideosLoadingLabel: UILabel!
-    @IBOutlet weak var feedRelatedVideosLoadingRetryButton: UIButton!
-    @IBOutlet weak var feedRelatedVideosLoadingActivityIndicator: UIActivityIndicatorView!
-    
-    
+
     // MARK: - Public properties -
   
     var presenter: FeedDetailPresenterInterface!
@@ -72,6 +62,22 @@ extension FeedDetailViewController {
 // MARK: - Extensions -
 
 extension FeedDetailViewController: FeedDetailViewInterface {
+    
+    func showLoading(_ loading: Bool) {
+        if loading {
+            showFenceLoading()
+        } else {
+            hideFenceView()
+        }
+    }
+    
+    func showError(error: ErrorInterface, target: Any? = nil, action: Selector? = nil) {
+        showFenceError(error: error, target: target, action: action)
+    }
+    
+    func showPlaceInfo(_ item: PlaceDetailInterface) {
+        
+    }
     
 
 }
