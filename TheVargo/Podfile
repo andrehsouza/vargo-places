@@ -1,0 +1,19 @@
+platform :ios, '9.0'
+use_frameworks!
+
+def shared_pods
+    
+    pod 'Alamofire'
+    pod 'TPKeyboardAvoiding'
+    pod 'AlamofireImage'
+    pod 'GooglePlaces'
+    pod 'GooglePlacePicker'
+    pod 'GoogleMaps'
+    
+end
+
+target "TheVargo" do
+    
+    shared_pods
+    
+end

@@ -1,0 +1,1116 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3007C22D20FA339E0080C086 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3007C22C20FA339E0080C086 /* AVKit.framework */; };
+		304F553E20F5979900111E6D /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F553D20F5979900111E6D /* Video.swift */; };
+		304F554020F597E700111E6D /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304F553F20F597E700111E6D /* Feed.swift */; };
+		307F367720F6E1280071DCB8 /* VUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F367620F6E1280071DCB8 /* VUrl.swift */; };
+		307F367D20F8162F0071DCB8 /* ThemeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F367C20F8162F0071DCB8 /* ThemeInitializer.swift */; };
+		307F368020F816710071DCB8 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F367F20F816710071DCB8 /* Initializable.swift */; };
+		307F368320F81A9D0071DCB8 /* Optima-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 307F368220F81A9D0071DCB8 /* Optima-Bold.ttf */; };
+		307F368520F9909A0071DCB8 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F368420F9909A0071DCB8 /* ReusableViewProtocol.swift */; };
+		307F368720F991E30071DCB8 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F368620F991E30071DCB8 /* UICollectionView+Extension.swift */; };
+		307F368920F9925D0071DCB8 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F368820F9925D0071DCB8 /* UICollectionViewCell+Extension.swift */; };
+		307F368D20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F368B20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.swift */; };
+		307F368E20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307F368C20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.xib */; };
+		307F369020F9A5130071DCB8 /* RelatedVideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F368F20F9A5130071DCB8 /* RelatedVideoService.swift */; };
+		30D2C79420F4516200B9A3BB /* VNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79220F4516200B9A3BB /* VNavigationController.swift */; };
+		30D2C79820F458B600B9A3BB /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */; };
+		7B5472F520F7811D00AB0278 /* FeedDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5472F420F7811D00AB0278 /* FeedDetail.storyboard */; };
+		7B5472FD20F7888800AB0278 /* FeedArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5472FB20F7888800AB0278 /* FeedArticleTableViewCell.swift */; };
+		7B5472FE20F7888800AB0278 /* FeedArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B5472FC20F7888800AB0278 /* FeedArticleTableViewCell.xib */; };
+		7B54730020F78F7200AB0278 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5472FF20F78F7200AB0278 /* UITableView+Extension.swift */; };
+		7B54730220F78FA200AB0278 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54730120F78FA200AB0278 /* UITableViewCell+Extension.swift */; };
+		7B54730420F79A7D00AB0278 /* FeedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54730320F79A7D00AB0278 /* FeedContent.swift */; };
+		7B54730620F7EF9700AB0278 /* VImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54730520F7EF9700AB0278 /* VImageView.swift */; };
+		7B54730820F7F17100AB0278 /* VUIVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B54730720F7F17100AB0278 /* VUIVisualEffectView.swift */; };
+		7B62BA2920F69C06001E848B /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA2820F69C06001E848B /* ErrorResponse.swift */; };
+		7B62BA2B20F69D5B001E848B /* RequestResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA2A20F69D5B001E848B /* RequestResultType.swift */; };
+		7B62BA2D20F69E95001E848B /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA2C20F69E95001E848B /* FeedService.swift */; };
+		7B62BA3120F6A26C001E848B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA3020F6A26C001E848B /* APIService.swift */; };
+		7B62BA3320F6A93D001E848B /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B62BA3220F6A93D001E848B /* ResponseType.swift */; };
+		7B64584220F394C10016557C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64583E20F394C00016557C /* UIView+Extension.swift */; };
+		7B64584320F394C10016557C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64583F20F394C10016557C /* UIColor+Extension.swift */; };
+		7B64584920F395CB0016557C /* VFenceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B64584720F395CB0016557C /* VFenceView.xib */; };
+		7B64584A20F395CB0016557C /* VFenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64584820F395CB0016557C /* VFenceView.swift */; };
+		7B64584C20F396250016557C /* VCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64584B20F396250016557C /* VCardView.swift */; };
+		7B64584E20F396560016557C /* VButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64584D20F396560016557C /* VButton.swift */; };
+		7B64585220F39DBD0016557C /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64585120F39DBD0016557C /* BaseViewProtocol.swift */; };
+		7B64585B20F3AA1F0016557C /* FeedListInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64585620F3AA1F0016557C /* FeedListInterfaces.swift */; };
+		7B64585C20F3AA1F0016557C /* FeedListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64585720F3AA1F0016557C /* FeedListPresenter.swift */; };
+		7B64585D20F3AA1F0016557C /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64585820F3AA1F0016557C /* FeedListViewController.swift */; };
+		7B64585E20F3AA1F0016557C /* FeedListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64585920F3AA1F0016557C /* FeedListInteractor.swift */; };
+		7B64585F20F3AA1F0016557C /* FeedListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64585A20F3AA1F0016557C /* FeedListWireframe.swift */; };
+		7B64586520F3AA580016557C /* FeedDetailInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586020F3AA580016557C /* FeedDetailInterfaces.swift */; };
+		7B64586620F3AA580016557C /* FeedDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586120F3AA580016557C /* FeedDetailPresenter.swift */; };
+		7B64586720F3AA580016557C /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586220F3AA580016557C /* FeedDetailViewController.swift */; };
+		7B64586820F3AA580016557C /* FeedDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586320F3AA580016557C /* FeedDetailInteractor.swift */; };
+		7B64586920F3AA580016557C /* FeedDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586420F3AA580016557C /* FeedDetailWireframe.swift */; };
+		7B64586C20F3C8930016557C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64586B20F3C8930016557C /* Article.swift */; };
+		7B6458AE20F3F7C60016557C /* VSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6458AD20F3F7C60016557C /* VSplitViewController.swift */; };
+		7B6458B020F3FF9B0016557C /* VBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6458AF20F3FF9B0016557C /* VBaseViewController.swift */; };
+		7B7BC66C20F928C500957534 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7BC66B20F928C500957534 /* Date+Extensions.swift */; };
+		7BA7F5CD2101651300A217CF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F5CC2101651300A217CF /* Constants.swift */; };
+		7BA7F5CF2101659000A217CF /* GooglePlacesInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F5CE2101659000A217CF /* GooglePlacesInitializer.swift */; };
+		7BA7F5D121016C1A00A217CF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA7F5D021016C1900A217CF /* CoreLocation.framework */; };
+		7BA7F5D321016FF600A217CF /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F5D221016FF600A217CF /* LocationService.swift */; };
+		7BA7F5D52101713C00A217CF /* LocationInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7F5D42101713C00A217CF /* LocationInitializer.swift */; };
+		7BD90FE020EFA631003E2DCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */; };
+		7BD90FE320EFA631003E2DCE /* TheVargo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FE120EFA631003E2DCE /* TheVargo.xcdatamodeld */; };
+		7BD90FEC20EFA633003E2DCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD90FEB20EFA633003E2DCE /* Assets.xcassets */; };
+		7BD90FEF20EFA633003E2DCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD90FED20EFA633003E2DCE /* LaunchScreen.storyboard */; };
+		7BD90FFA20EFA633003E2DCE /* TheVargoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD90FF920EFA633003E2DCE /* TheVargoTests.swift */; };
+		7BD9100520EFA633003E2DCE /* TheVargoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9100420EFA633003E2DCE /* TheVargoUITests.swift */; };
+		7BD9102220EFB534003E2DCE /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9102120EFB534003E2DCE /* BaseWireframe.swift */; };
+		7BD9102420EFB5A4003E2DCE /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9102320EFB5A4003E2DCE /* PresenterInterface.swift */; };
+		7BD9102620EFB644003E2DCE /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9102520EFB644003E2DCE /* ViewInterface.swift */; };
+		7BD9102820EFB671003E2DCE /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9102720EFB671003E2DCE /* InteractorInterface.swift */; };
+		7BD9102B20EFB6FA003E2DCE /* FeedList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD9102A20EFB6FA003E2DCE /* FeedList.storyboard */; };
+		7BD9102F20EFBD82003E2DCE /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9102E20EFBD82003E2DCE /* UIStoryboard+Extension.swift */; };
+		7BD9103120EFBDD5003E2DCE /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9103020EFBDD5003E2DCE /* NSObject+Extension.swift */; };
+		BB66A1C1709469079163ACAB /* Pods_TheVargo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B378DD3D1AD491B7AD0BF5F /* Pods_TheVargo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7BD90FF620EFA633003E2DCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BD90FD420EFA631003E2DCE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BD90FDB20EFA631003E2DCE;
+			remoteInfo = TheVargo;
+		};
+		7BD9100120EFA633003E2DCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BD90FD420EFA631003E2DCE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BD90FDB20EFA631003E2DCE;
+			remoteInfo = TheVargo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D4E52A848D90BAA3F5C7E7C /* Pods-TheVargo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVargo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheVargo/Pods-TheVargo.release.xcconfig"; sourceTree = "<group>"; };
+		27FAD1BB3B77E50A1E99AD57 /* Pods-TheVargo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheVargo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheVargo/Pods-TheVargo.debug.xcconfig"; sourceTree = "<group>"; };
+		3007C22A20FA33050080C086 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		3007C22C20FA339E0080C086 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		304F553D20F5979900111E6D /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		304F553F20F597E700111E6D /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		307F367620F6E1280071DCB8 /* VUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUrl.swift; sourceTree = "<group>"; };
+		307F367C20F8162F0071DCB8 /* ThemeInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeInitializer.swift; sourceTree = "<group>"; };
+		307F367F20F816710071DCB8 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
+		307F368220F81A9D0071DCB8 /* Optima-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Optima-Bold.ttf"; sourceTree = "<group>"; };
+		307F368420F9909A0071DCB8 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		307F368620F991E30071DCB8 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		307F368820F9925D0071DCB8 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		307F368B20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRelatedVideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		307F368C20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedRelatedVideoCollectionViewCell.xib; sourceTree = "<group>"; };
+		307F368F20F9A5130071DCB8 /* RelatedVideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedVideoService.swift; sourceTree = "<group>"; };
+		30D2C79220F4516200B9A3BB /* VNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNavigationController.swift; sourceTree = "<group>"; };
+		30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		5B378DD3D1AD491B7AD0BF5F /* Pods_TheVargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheVargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5472F420F7811D00AB0278 /* FeedDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedDetail.storyboard; sourceTree = "<group>"; };
+		7B5472FB20F7888800AB0278 /* FeedArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedArticleTableViewCell.swift; sourceTree = "<group>"; };
+		7B5472FC20F7888800AB0278 /* FeedArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedArticleTableViewCell.xib; sourceTree = "<group>"; };
+		7B5472FF20F78F7200AB0278 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		7B54730120F78FA200AB0278 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		7B54730320F79A7D00AB0278 /* FeedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContent.swift; sourceTree = "<group>"; };
+		7B54730520F7EF9700AB0278 /* VImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VImageView.swift; sourceTree = "<group>"; };
+		7B54730720F7F17100AB0278 /* VUIVisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUIVisualEffectView.swift; sourceTree = "<group>"; };
+		7B62BA2820F69C06001E848B /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		7B62BA2A20F69D5B001E848B /* RequestResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResultType.swift; sourceTree = "<group>"; };
+		7B62BA2C20F69E95001E848B /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
+		7B62BA3020F6A26C001E848B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		7B62BA3220F6A93D001E848B /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
+		7B64583E20F394C00016557C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		7B64583F20F394C10016557C /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		7B64584720F395CB0016557C /* VFenceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VFenceView.xib; sourceTree = "<group>"; };
+		7B64584820F395CB0016557C /* VFenceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VFenceView.swift; sourceTree = "<group>"; };
+		7B64584B20F396250016557C /* VCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCardView.swift; sourceTree = "<group>"; };
+		7B64584D20F396560016557C /* VButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VButton.swift; sourceTree = "<group>"; };
+		7B64585120F39DBD0016557C /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
+		7B64585620F3AA1F0016557C /* FeedListInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListInterfaces.swift; sourceTree = "<group>"; };
+		7B64585720F3AA1F0016557C /* FeedListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListPresenter.swift; sourceTree = "<group>"; };
+		7B64585820F3AA1F0016557C /* FeedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewController.swift; sourceTree = "<group>"; };
+		7B64585920F3AA1F0016557C /* FeedListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListInteractor.swift; sourceTree = "<group>"; };
+		7B64585A20F3AA1F0016557C /* FeedListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListWireframe.swift; sourceTree = "<group>"; };
+		7B64586020F3AA580016557C /* FeedDetailInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailInterfaces.swift; sourceTree = "<group>"; };
+		7B64586120F3AA580016557C /* FeedDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailPresenter.swift; sourceTree = "<group>"; };
+		7B64586220F3AA580016557C /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
+		7B64586320F3AA580016557C /* FeedDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailInteractor.swift; sourceTree = "<group>"; };
+		7B64586420F3AA580016557C /* FeedDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailWireframe.swift; sourceTree = "<group>"; };
+		7B64586B20F3C8930016557C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		7B6458AD20F3F7C60016557C /* VSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSplitViewController.swift; sourceTree = "<group>"; };
+		7B6458AF20F3FF9B0016557C /* VBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VBaseViewController.swift; sourceTree = "<group>"; };
+		7B7BC66B20F928C500957534 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		7BA7F5CC2101651300A217CF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7BA7F5CE2101659000A217CF /* GooglePlacesInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesInitializer.swift; sourceTree = "<group>"; };
+		7BA7F5D021016C1900A217CF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7BA7F5D221016FF600A217CF /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		7BA7F5D42101713C00A217CF /* LocationInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInitializer.swift; sourceTree = "<group>"; };
+		7BD90FDC20EFA631003E2DCE /* TheVargo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheVargo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BD90FE220EFA631003E2DCE /* TheVargo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheVargo.xcdatamodel; sourceTree = "<group>"; };
+		7BD90FEB20EFA633003E2DCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BD90FEE20EFA633003E2DCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7BD90FF020EFA633003E2DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BD90FF520EFA633003E2DCE /* TheVargoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheVargoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD90FF920EFA633003E2DCE /* TheVargoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheVargoTests.swift; sourceTree = "<group>"; };
+		7BD90FFB20EFA633003E2DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BD9100020EFA633003E2DCE /* TheVargoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheVargoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BD9100420EFA633003E2DCE /* TheVargoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheVargoUITests.swift; sourceTree = "<group>"; };
+		7BD9100620EFA633003E2DCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BD9102120EFB534003E2DCE /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		7BD9102320EFB5A4003E2DCE /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		7BD9102520EFB644003E2DCE /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		7BD9102720EFB671003E2DCE /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
+		7BD9102A20EFB6FA003E2DCE /* FeedList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedList.storyboard; sourceTree = "<group>"; };
+		7BD9102E20EFBD82003E2DCE /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		7BD9103020EFBDD5003E2DCE /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BD90FD920EFA631003E2DCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BA7F5D121016C1A00A217CF /* CoreLocation.framework in Frameworks */,
+				3007C22D20FA339E0080C086 /* AVKit.framework in Frameworks */,
+				BB66A1C1709469079163ACAB /* Pods_TheVargo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BD90FF220EFA633003E2DCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BD90FFD20EFA633003E2DCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		307F367520F6E0F50071DCB8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				307F367620F6E1280071DCB8 /* VUrl.swift */,
+				7BA7F5CC2101651300A217CF /* Constants.swift */,
+				7BA7F5D221016FF600A217CF /* LocationService.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		307F367820F814DB0071DCB8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7BD90FEB20EFA633003E2DCE /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		307F367A20F815280071DCB8 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				307F368120F81A840071DCB8 /* Fonts */,
+				7BD90FED20EFA633003E2DCE /* LaunchScreen.storyboard */,
+				7BD90FF020EFA633003E2DCE /* Info.plist */,
+				7BD90FE120EFA631003E2DCE /* TheVargo.xcdatamodeld */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		307F367B20F8161E0071DCB8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				7BD90FDF20EFA631003E2DCE /* AppDelegate.swift */,
+				307F367E20F8163F0071DCB8 /* Initializers */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		307F367E20F8163F0071DCB8 /* Initializers */ = {
+			isa = PBXGroup;
+			children = (
+				307F367F20F816710071DCB8 /* Initializable.swift */,
+				307F367C20F8162F0071DCB8 /* ThemeInitializer.swift */,
+				7BA7F5CE2101659000A217CF /* GooglePlacesInitializer.swift */,
+				7BA7F5D42101713C00A217CF /* LocationInitializer.swift */,
+			);
+			path = Initializers;
+			sourceTree = "<group>";
+		};
+		307F368120F81A840071DCB8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				307F368220F81A9D0071DCB8 /* Optima-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		307F368A20F9975A0071DCB8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				307F368B20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.swift */,
+				307F368C20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		30D2C79620F4519F00B9A3BB /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				7BD9102120EFB534003E2DCE /* BaseWireframe.swift */,
+				7BD9102520EFB644003E2DCE /* ViewInterface.swift */,
+				7BD9102320EFB5A4003E2DCE /* PresenterInterface.swift */,
+				7BD9102720EFB671003E2DCE /* InteractorInterface.swift */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		7B5472F620F7817C00AB0278 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7B5472FB20F7888800AB0278 /* FeedArticleTableViewCell.swift */,
+				7B5472FC20F7888800AB0278 /* FeedArticleTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		7B62BA2720F69B8C001E848B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7B62BA3020F6A26C001E848B /* APIService.swift */,
+				7B62BA2C20F69E95001E848B /* FeedService.swift */,
+				307F368F20F9A5130071DCB8 /* RelatedVideoService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7B62BA3620F6B662001E848B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B62BA2820F69C06001E848B /* ErrorResponse.swift */,
+				7B62BA3220F6A93D001E848B /* ResponseType.swift */,
+				7B62BA2A20F69D5B001E848B /* RequestResultType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B64583D20F394220016557C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7B64585320F39F5B0016557C /* Base */,
+				7B64584620F395CB0016557C /* VFenceView */,
+				7B64584B20F396250016557C /* VCardView.swift */,
+				7B54730720F7F17100AB0278 /* VUIVisualEffectView.swift */,
+				7B54730520F7EF9700AB0278 /* VImageView.swift */,
+				7B64584D20F396560016557C /* VButton.swift */,
+				7B6458AD20F3F7C60016557C /* VSplitViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7B64584620F395CB0016557C /* VFenceView */ = {
+			isa = PBXGroup;
+			children = (
+				7B64584720F395CB0016557C /* VFenceView.xib */,
+				7B64584820F395CB0016557C /* VFenceView.swift */,
+			);
+			path = VFenceView;
+			sourceTree = "<group>";
+		};
+		7B64585320F39F5B0016557C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7B64585120F39DBD0016557C /* BaseViewProtocol.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		7B64585420F3A9CF0016557C /* FeedList */ = {
+			isa = PBXGroup;
+			children = (
+				7BD9102A20EFB6FA003E2DCE /* FeedList.storyboard */,
+				7B5472F620F7817C00AB0278 /* Cells */,
+				7B64585620F3AA1F0016557C /* FeedListInterfaces.swift */,
+				7B64585720F3AA1F0016557C /* FeedListPresenter.swift */,
+				7B64585820F3AA1F0016557C /* FeedListViewController.swift */,
+				7B64585920F3AA1F0016557C /* FeedListInteractor.swift */,
+				7B64585A20F3AA1F0016557C /* FeedListWireframe.swift */,
+			);
+			path = FeedList;
+			sourceTree = "<group>";
+		};
+		7B64585520F3A9E20016557C /* FeedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7B5472F420F7811D00AB0278 /* FeedDetail.storyboard */,
+				307F368A20F9975A0071DCB8 /* Cells */,
+				7B64586020F3AA580016557C /* FeedDetailInterfaces.swift */,
+				7B64586120F3AA580016557C /* FeedDetailPresenter.swift */,
+				7B64586220F3AA580016557C /* FeedDetailViewController.swift */,
+				7B64586320F3AA580016557C /* FeedDetailInteractor.swift */,
+				7B64586420F3AA580016557C /* FeedDetailWireframe.swift */,
+			);
+			path = FeedDetail;
+			sourceTree = "<group>";
+		};
+		7B64586A20F3C82E0016557C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				304F553F20F597E700111E6D /* Feed.swift */,
+				7B54730320F79A7D00AB0278 /* FeedContent.swift */,
+				7B64586B20F3C8930016557C /* Article.swift */,
+				304F553D20F5979900111E6D /* Video.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7BD90FD320EFA631003E2DCE = {
+			isa = PBXGroup;
+			children = (
+				7BD90FDE20EFA631003E2DCE /* TheVargo */,
+				7BD90FF820EFA633003E2DCE /* TheVargoTests */,
+				7BD9100320EFA633003E2DCE /* TheVargoUITests */,
+				7BD90FDD20EFA631003E2DCE /* Products */,
+				A9AE3693EDC0E6B7BAF1CC36 /* Pods */,
+				D5FE0FAA92104EE3A58F5E33 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7BD90FDD20EFA631003E2DCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BD90FDC20EFA631003E2DCE /* TheVargo.app */,
+				7BD90FF520EFA633003E2DCE /* TheVargoTests.xctest */,
+				7BD9100020EFA633003E2DCE /* TheVargoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BD90FDE20EFA631003E2DCE /* TheVargo */ = {
+			isa = PBXGroup;
+			children = (
+				307F367B20F8161E0071DCB8 /* Application */,
+				7BD9102C20EFB99E003E2DCE /* Common */,
+				7BD9101C20EFB312003E2DCE /* Modules */,
+				307F367820F814DB0071DCB8 /* Resources */,
+				307F367A20F815280071DCB8 /* SupportingFiles */,
+			);
+			path = TheVargo;
+			sourceTree = "<group>";
+		};
+		7BD90FF820EFA633003E2DCE /* TheVargoTests */ = {
+			isa = PBXGroup;
+			children = (
+				7BD90FF920EFA633003E2DCE /* TheVargoTests.swift */,
+				7BD90FFB20EFA633003E2DCE /* Info.plist */,
+			);
+			path = TheVargoTests;
+			sourceTree = "<group>";
+		};
+		7BD9100320EFA633003E2DCE /* TheVargoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7BD9100420EFA633003E2DCE /* TheVargoUITests.swift */,
+				7BD9100620EFA633003E2DCE /* Info.plist */,
+			);
+			path = TheVargoUITests;
+			sourceTree = "<group>";
+		};
+		7BD9101C20EFB312003E2DCE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				7BD9102920EFB6D8003E2DCE /* Feed */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		7BD9102020EFB521003E2DCE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7B6458AF20F3FF9B0016557C /* VBaseViewController.swift */,
+				30D2C79220F4516200B9A3BB /* VNavigationController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		7BD9102920EFB6D8003E2DCE /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				7B64585420F3A9CF0016557C /* FeedList */,
+				7B64585520F3A9E20016557C /* FeedDetail */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		7BD9102C20EFB99E003E2DCE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				30D2C79620F4519F00B9A3BB /* VIPER */,
+				7BD9102020EFB521003E2DCE /* Base */,
+				307F367520F6E0F50071DCB8 /* Util */,
+				7B62BA2720F69B8C001E848B /* Service */,
+				7B62BA3620F6B662001E848B /* Model */,
+				7B64586A20F3C82E0016557C /* Entities */,
+				7B64583D20F394220016557C /* Views */,
+				7BD9102D20EFB9BE003E2DCE /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7BD9102D20EFB9BE003E2DCE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				307F368420F9909A0071DCB8 /* ReusableViewProtocol.swift */,
+				7B64583F20F394C10016557C /* UIColor+Extension.swift */,
+				7B64583E20F394C00016557C /* UIView+Extension.swift */,
+				7BD9102E20EFBD82003E2DCE /* UIStoryboard+Extension.swift */,
+				7BD9103020EFBDD5003E2DCE /* NSObject+Extension.swift */,
+				30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */,
+				7B54730120F78FA200AB0278 /* UITableViewCell+Extension.swift */,
+				7B5472FF20F78F7200AB0278 /* UITableView+Extension.swift */,
+				7B7BC66B20F928C500957534 /* Date+Extensions.swift */,
+				307F368820F9925D0071DCB8 /* UICollectionViewCell+Extension.swift */,
+				307F368620F991E30071DCB8 /* UICollectionView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A9AE3693EDC0E6B7BAF1CC36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27FAD1BB3B77E50A1E99AD57 /* Pods-TheVargo.debug.xcconfig */,
+				1D4E52A848D90BAA3F5C7E7C /* Pods-TheVargo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5FE0FAA92104EE3A58F5E33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BA7F5D021016C1900A217CF /* CoreLocation.framework */,
+				3007C22C20FA339E0080C086 /* AVKit.framework */,
+				3007C22A20FA33050080C086 /* MediaPlayer.framework */,
+				5B378DD3D1AD491B7AD0BF5F /* Pods_TheVargo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BD90FDB20EFA631003E2DCE /* TheVargo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BD9100920EFA633003E2DCE /* Build configuration list for PBXNativeTarget "TheVargo" */;
+			buildPhases = (
+				4B1E9B0080073CC8BCD2BA0E /* [CP] Check Pods Manifest.lock */,
+				7BD90FD820EFA631003E2DCE /* Sources */,
+				7BD90FD920EFA631003E2DCE /* Frameworks */,
+				7BD90FDA20EFA631003E2DCE /* Resources */,
+				C5228F02E97558DEA08A2CF7 /* [CP] Embed Pods Frameworks */,
+				E9155CE8A8461385C6CDF241 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheVargo;
+			productName = TheVargo;
+			productReference = 7BD90FDC20EFA631003E2DCE /* TheVargo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7BD90FF420EFA633003E2DCE /* TheVargoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BD9100C20EFA633003E2DCE /* Build configuration list for PBXNativeTarget "TheVargoTests" */;
+			buildPhases = (
+				7BD90FF120EFA633003E2DCE /* Sources */,
+				7BD90FF220EFA633003E2DCE /* Frameworks */,
+				7BD90FF320EFA633003E2DCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BD90FF720EFA633003E2DCE /* PBXTargetDependency */,
+			);
+			name = TheVargoTests;
+			productName = TheVargoTests;
+			productReference = 7BD90FF520EFA633003E2DCE /* TheVargoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7BD90FFF20EFA633003E2DCE /* TheVargoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BD9100F20EFA633003E2DCE /* Build configuration list for PBXNativeTarget "TheVargoUITests" */;
+			buildPhases = (
+				7BD90FFC20EFA633003E2DCE /* Sources */,
+				7BD90FFD20EFA633003E2DCE /* Frameworks */,
+				7BD90FFE20EFA633003E2DCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BD9100220EFA633003E2DCE /* PBXTargetDependency */,
+			);
+			name = TheVargoUITests;
+			productName = TheVargoUITests;
+			productReference = 7BD9100020EFA633003E2DCE /* TheVargoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BD90FD420EFA631003E2DCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = AndreSamples;
+				TargetAttributes = {
+					7BD90FDB20EFA631003E2DCE = {
+						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					7BD90FF420EFA633003E2DCE = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 7BD90FDB20EFA631003E2DCE;
+					};
+					7BD90FFF20EFA633003E2DCE = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 7BD90FDB20EFA631003E2DCE;
+					};
+				};
+			};
+			buildConfigurationList = 7BD90FD720EFA631003E2DCE /* Build configuration list for PBXProject "TheVargo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7BD90FD320EFA631003E2DCE;
+			productRefGroup = 7BD90FDD20EFA631003E2DCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BD90FDB20EFA631003E2DCE /* TheVargo */,
+				7BD90FF420EFA633003E2DCE /* TheVargoTests */,
+				7BD90FFF20EFA633003E2DCE /* TheVargoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BD90FDA20EFA631003E2DCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD9102B20EFB6FA003E2DCE /* FeedList.storyboard in Resources */,
+				7BD90FEF20EFA633003E2DCE /* LaunchScreen.storyboard in Resources */,
+				307F368E20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.xib in Resources */,
+				7B5472FE20F7888800AB0278 /* FeedArticleTableViewCell.xib in Resources */,
+				7BD90FEC20EFA633003E2DCE /* Assets.xcassets in Resources */,
+				7B5472F520F7811D00AB0278 /* FeedDetail.storyboard in Resources */,
+				7B64584920F395CB0016557C /* VFenceView.xib in Resources */,
+				307F368320F81A9D0071DCB8 /* Optima-Bold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BD90FF320EFA633003E2DCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BD90FFE20EFA633003E2DCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B1E9B0080073CC8BCD2BA0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheVargo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5228F02E97558DEA08A2CF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TheVargo/Pods-TheVargo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheVargo/Pods-TheVargo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9155CE8A8461385C6CDF241 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TheVargo/Pods-TheVargo-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheVargo/Pods-TheVargo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BD90FD820EFA631003E2DCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				307F368720F991E30071DCB8 /* UICollectionView+Extension.swift in Sources */,
+				30D2C79820F458B600B9A3BB /* UINavigationController+Extension.swift in Sources */,
+				307F368920F9925D0071DCB8 /* UICollectionViewCell+Extension.swift in Sources */,
+				7B64585F20F3AA1F0016557C /* FeedListWireframe.swift in Sources */,
+				7B54730020F78F7200AB0278 /* UITableView+Extension.swift in Sources */,
+				7B6458B020F3FF9B0016557C /* VBaseViewController.swift in Sources */,
+				7B64586820F3AA580016557C /* FeedDetailInteractor.swift in Sources */,
+				7BA7F5CD2101651300A217CF /* Constants.swift in Sources */,
+				304F554020F597E700111E6D /* Feed.swift in Sources */,
+				7B64586C20F3C8930016557C /* Article.swift in Sources */,
+				7B54730220F78FA200AB0278 /* UITableViewCell+Extension.swift in Sources */,
+				7BD90FE020EFA631003E2DCE /* AppDelegate.swift in Sources */,
+				7BD9102220EFB534003E2DCE /* BaseWireframe.swift in Sources */,
+				7B64584220F394C10016557C /* UIView+Extension.swift in Sources */,
+				7BD9102420EFB5A4003E2DCE /* PresenterInterface.swift in Sources */,
+				7B64586520F3AA580016557C /* FeedDetailInterfaces.swift in Sources */,
+				7BA7F5D52101713C00A217CF /* LocationInitializer.swift in Sources */,
+				7B62BA2B20F69D5B001E848B /* RequestResultType.swift in Sources */,
+				7B54730820F7F17100AB0278 /* VUIVisualEffectView.swift in Sources */,
+				30D2C79420F4516200B9A3BB /* VNavigationController.swift in Sources */,
+				307F368020F816710071DCB8 /* Initializable.swift in Sources */,
+				7B64584C20F396250016557C /* VCardView.swift in Sources */,
+				7B64584320F394C10016557C /* UIColor+Extension.swift in Sources */,
+				7B62BA2D20F69E95001E848B /* FeedService.swift in Sources */,
+				7B64585D20F3AA1F0016557C /* FeedListViewController.swift in Sources */,
+				7B62BA3120F6A26C001E848B /* APIService.swift in Sources */,
+				7B5472FD20F7888800AB0278 /* FeedArticleTableViewCell.swift in Sources */,
+				7BA7F5CF2101659000A217CF /* GooglePlacesInitializer.swift in Sources */,
+				7B64584A20F395CB0016557C /* VFenceView.swift in Sources */,
+				7BD90FE320EFA631003E2DCE /* TheVargo.xcdatamodeld in Sources */,
+				7BD9103120EFBDD5003E2DCE /* NSObject+Extension.swift in Sources */,
+				7BD9102F20EFBD82003E2DCE /* UIStoryboard+Extension.swift in Sources */,
+				7B64586720F3AA580016557C /* FeedDetailViewController.swift in Sources */,
+				7B64585220F39DBD0016557C /* BaseViewProtocol.swift in Sources */,
+				7B64584E20F396560016557C /* VButton.swift in Sources */,
+				7BA7F5D321016FF600A217CF /* LocationService.swift in Sources */,
+				307F368D20F997890071DCB8 /* FeedRelatedVideoCollectionViewCell.swift in Sources */,
+				7B64585C20F3AA1F0016557C /* FeedListPresenter.swift in Sources */,
+				7B62BA3320F6A93D001E848B /* ResponseType.swift in Sources */,
+				7BD9102620EFB644003E2DCE /* ViewInterface.swift in Sources */,
+				7B7BC66C20F928C500957534 /* Date+Extensions.swift in Sources */,
+				7B54730620F7EF9700AB0278 /* VImageView.swift in Sources */,
+				7B62BA2920F69C06001E848B /* ErrorResponse.swift in Sources */,
+				307F368520F9909A0071DCB8 /* ReusableViewProtocol.swift in Sources */,
+				7B64586620F3AA580016557C /* FeedDetailPresenter.swift in Sources */,
+				307F369020F9A5130071DCB8 /* RelatedVideoService.swift in Sources */,
+				7B64586920F3AA580016557C /* FeedDetailWireframe.swift in Sources */,
+				307F367D20F8162F0071DCB8 /* ThemeInitializer.swift in Sources */,
+				7B64585B20F3AA1F0016557C /* FeedListInterfaces.swift in Sources */,
+				7BD9102820EFB671003E2DCE /* InteractorInterface.swift in Sources */,
+				307F367720F6E1280071DCB8 /* VUrl.swift in Sources */,
+				304F553E20F5979900111E6D /* Video.swift in Sources */,
+				7B54730420F79A7D00AB0278 /* FeedContent.swift in Sources */,
+				7B6458AE20F3F7C60016557C /* VSplitViewController.swift in Sources */,
+				7B64585E20F3AA1F0016557C /* FeedListInteractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BD90FF120EFA633003E2DCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD90FFA20EFA633003E2DCE /* TheVargoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BD90FFC20EFA633003E2DCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD9100520EFA633003E2DCE /* TheVargoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7BD90FF720EFA633003E2DCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BD90FDB20EFA631003E2DCE /* TheVargo */;
+			targetProxy = 7BD90FF620EFA633003E2DCE /* PBXContainerItemProxy */;
+		};
+		7BD9100220EFA633003E2DCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BD90FDB20EFA631003E2DCE /* TheVargo */;
+			targetProxy = 7BD9100120EFA633003E2DCE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7BD90FED20EFA633003E2DCE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BD90FEE20EFA633003E2DCE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BD9100720EFA633003E2DCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7BD9100820EFA633003E2DCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BD9100A20EFA633003E2DCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27FAD1BB3B77E50A1E99AD57 /* Pods-TheVargo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = TheVargo/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andre.samples.vargo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BD9100B20EFA633003E2DCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D4E52A848D90BAA3F5C7E7C /* Pods-TheVargo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = TheVargo/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andre.samples.vargo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7BD9100D20EFA633003E2DCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 959WMEP4YD;
+				INFOPLIST_FILE = TheVargoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andre.samples.TheVargoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheVargo.app/TheVargo";
+			};
+			name = Debug;
+		};
+		7BD9100E20EFA633003E2DCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 959WMEP4YD;
+				INFOPLIST_FILE = TheVargoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andre.samples.TheVargoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheVargo.app/TheVargo";
+			};
+			name = Release;
+		};
+		7BD9101020EFA633003E2DCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 959WMEP4YD;
+				INFOPLIST_FILE = TheVargoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andre.samples.TheVargoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheVargo;
+			};
+			name = Debug;
+		};
+		7BD9101120EFA633003E2DCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 959WMEP4YD;
+				INFOPLIST_FILE = TheVargoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andre.samples.TheVargoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TheVargo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BD90FD720EFA631003E2DCE /* Build configuration list for PBXProject "TheVargo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD9100720EFA633003E2DCE /* Debug */,
+				7BD9100820EFA633003E2DCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BD9100920EFA633003E2DCE /* Build configuration list for PBXNativeTarget "TheVargo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD9100A20EFA633003E2DCE /* Debug */,
+				7BD9100B20EFA633003E2DCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BD9100C20EFA633003E2DCE /* Build configuration list for PBXNativeTarget "TheVargoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD9100D20EFA633003E2DCE /* Debug */,
+				7BD9100E20EFA633003E2DCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BD9100F20EFA633003E2DCE /* Build configuration list for PBXNativeTarget "TheVargoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BD9101020EFA633003E2DCE /* Debug */,
+				7BD9101120EFA633003E2DCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7BD90FE120EFA631003E2DCE /* TheVargo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7BD90FE220EFA631003E2DCE /* TheVargo.xcdatamodel */,
+			);
+			currentVersion = 7BD90FE220EFA631003E2DCE /* TheVargo.xcdatamodel */;
+			path = TheVargo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7BD90FD420EFA631003E2DCE /* Project object */;
+}
