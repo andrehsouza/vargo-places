@@ -53,6 +53,20 @@ extension FeedDetailPresenter: FeedDetailPresenterInterface {
 
 extension FeedDetailPresenter {
     
+    private func showStaticMap() {
+        guard let currentLocation = LocationService.sharedInstance.locationManager.location else { return }
+        
+        let staticMapUrl: String = "http://maps.google.com/maps/api/staticmap?markers=color:red|\(currentLocation.coordinate.latitude),\(currentLocation.coordinate.longitude)&\("zoom=13&size=1800x300")&sensor=true"
+        let url = URL(string: staticMapUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+        
+        do {
+            let data = try NSData(contentsOf: url!, options: NSData.ReadingOptions())
+            _view.showStaticMapImage(UIImage(data: data as Data))
+        } catch {
+            _view.showStaticMapImage(#imageLiteral(resourceName: "ic_place_holder"))
+        }
+    }
+    
     @objc private func _getDetail() {
         guard let placeId = _placeId else { return }
         _view.showLoading(true)
@@ -61,12 +75,12 @@ extension FeedDetailPresenter {
         })
     }
     
-    private func _handleFeedResult(_ result: RequestResultType<Place>) {
+    private func _handleFeedResult(_ result: RequestResultType<PlaceDetail>) {
         switch result {
         case .success(let place):
             _view.showLoading(false)
-            self._place = place
-            _view.showPlaceInfo(place)
+            self._place = place.result
+            _view.showPlaceInfo(place.result)
             break
         case .failure(let errorResponse):
             _view.showError(error: errorResponse, target: self, action: #selector(self._getDetail))

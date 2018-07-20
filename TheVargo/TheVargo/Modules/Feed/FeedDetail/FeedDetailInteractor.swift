@@ -20,7 +20,7 @@ final class FeedDetailInteractor {
 
 extension FeedDetailInteractor: FeedDetailInteractorInterface {
     
-    func get(placeId: String, completion: @escaping (RequestResultType<Place>) -> Void) {
+    func get(placeId: String, completion: @escaping (RequestResultType<PlaceDetail>) -> Void) {
         detailService.get(placeId, completion)
     }
     

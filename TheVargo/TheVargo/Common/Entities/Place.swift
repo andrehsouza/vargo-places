@@ -19,9 +19,9 @@ struct Place: Decodable {
     var phone: String?
     
     enum CodingKeys: String, CodingKey {
+        case place_id
         case address = "formatted_address"
         case phone = "formatted_phone_number"
-        case place_id
         case name
         case geometry
         case photos
@@ -43,6 +43,14 @@ extension Place: PlaceItemInterface {
 }
 
 extension Place: PlaceDetailInterface {
+    
+    var addressTitle: String {
+        return "Address"
+    }
+    
+    var phoneTitle: String? {
+        return "Phone"
+    }
     
     var location: Location? {
         return geometry?.location

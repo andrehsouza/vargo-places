@@ -18,6 +18,7 @@
 		307F368920F9925D0071DCB8 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F368820F9925D0071DCB8 /* UICollectionViewCell+Extension.swift */; };
 		30D2C79420F4516200B9A3BB /* VNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79220F4516200B9A3BB /* VNavigationController.swift */; };
 		30D2C79820F458B600B9A3BB /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */; };
+		30EF40DD2101DE8900446587 /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EF40DC2101DE8900446587 /* PlaceDetail.swift */; };
 		7B5472F520F7811D00AB0278 /* FeedDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5472F420F7811D00AB0278 /* FeedDetail.storyboard */; };
 		7B5472FD20F7888800AB0278 /* FeedArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5472FB20F7888800AB0278 /* FeedArticleTableViewCell.swift */; };
 		7B5472FE20F7888800AB0278 /* FeedArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B5472FC20F7888800AB0278 /* FeedArticleTableViewCell.xib */; };
@@ -108,6 +109,7 @@
 		307F368820F9925D0071DCB8 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		30D2C79220F4516200B9A3BB /* VNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNavigationController.swift; sourceTree = "<group>"; };
 		30D2C79720F458B600B9A3BB /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		30EF40DC2101DE8900446587 /* PlaceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetail.swift; sourceTree = "<group>"; };
 		5B378DD3D1AD491B7AD0BF5F /* Pods_TheVargo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheVargo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5472F420F7811D00AB0278 /* FeedDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedDetail.storyboard; sourceTree = "<group>"; };
 		7B5472FB20F7888800AB0278 /* FeedArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedArticleTableViewCell.swift; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 			children = (
 				304F553F20F597E700111E6D /* Feed.swift */,
 				7BA7F5D821018A8C00A217CF /* Place.swift */,
+				30EF40DC2101DE8900446587 /* PlaceDetail.swift */,
 				7BA7F5E02101A8CA00A217CF /* Geometry.swift */,
 				7BA7F5DA21018D5600A217CF /* Location.swift */,
 				7BA7F5DC2101940700A217CF /* Photo.swift */,
@@ -715,6 +718,7 @@
 				30D2C79820F458B600B9A3BB /* UINavigationController+Extension.swift in Sources */,
 				307F368920F9925D0071DCB8 /* UICollectionViewCell+Extension.swift in Sources */,
 				7B64585F20F3AA1F0016557C /* FeedListWireframe.swift in Sources */,
+				30EF40DD2101DE8900446587 /* PlaceDetail.swift in Sources */,
 				7B54730020F78F7200AB0278 /* UITableView+Extension.swift in Sources */,
 				7B6458B020F3FF9B0016557C /* VBaseViewController.swift in Sources */,
 				7B64586820F3AA580016557C /* FeedDetailInteractor.swift in Sources */,

@@ -11,7 +11,7 @@ import Alamofire
 
 class DetailService: NSObject {
     
-    func get(_ placeId: String, _ completion: @escaping (RequestResultType<Place>) -> Void) {
+    func get(_ placeId: String, _ completion: @escaping (RequestResultType<PlaceDetail>) -> Void) {
         let url = VUrl.path(for: .detail(placeId: placeId))
         let service = APIService(with: url)
         service.getData(completion)

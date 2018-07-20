@@ -18,9 +18,10 @@ protocol FeedDetailWireframeInterface: WireframeInterface {
 }
 
 protocol FeedDetailViewInterface: ViewInterface {
-    func showPlaceInfo(_ item: PlaceDetailInterface)
+    func showPlaceInfo(_ item: PlaceDetailInterface?)
     func showError(error: ErrorInterface, target: Any?, action: Selector?)
     func showLoading(_ loading: Bool)
+    func showStaticMapImage(_ image: UIImage?)
 }
 
 protocol FeedDetailPresenterInterface: PresenterInterface {
@@ -29,11 +30,13 @@ protocol FeedDetailPresenterInterface: PresenterInterface {
 }
 
 protocol FeedDetailInteractorInterface: InteractorInterface {
-     func get(placeId: String, completion: @escaping (RequestResultType<Place>) -> Void) 
+     func get(placeId: String, completion: @escaping (RequestResultType<PlaceDetail>) -> Void) 
 }
 
 protocol PlaceDetailInterface: PlaceItemInterface {
     var location: Location? { get }
+    var addressTitle: String { get }
     var address: String? { get }
+    var phoneTitle: String? { get }
     var phone: String? { get }
 }

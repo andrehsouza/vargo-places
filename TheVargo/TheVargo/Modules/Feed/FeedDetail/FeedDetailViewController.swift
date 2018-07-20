@@ -26,7 +26,6 @@ final class FeedDetailViewController: VBaseViewController {
     @IBOutlet weak var placePhoneLbl: UILabel!
     @IBOutlet weak var placePhoneValueLbl: UILabel!
     
-    @IBOutlet weak var placeMapTitleLabel: UILabel!
     @IBOutlet weak var placeMapImage: UIImageView!
     
 
@@ -69,8 +68,28 @@ extension FeedDetailViewController: FeedDetailViewInterface {
         showFenceError(error: error, target: target, action: action)
     }
     
-    func showPlaceInfo(_ item: PlaceDetailInterface) {
+    func showPlaceInfo(_ item: PlaceDetailInterface?) {
         
+        if let urlString = item?.imageURL, let url = URL(string: VUrl.path(for: .imageUrl(photoReference: urlString))) {
+            placeImageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "ic_place_holder"))
+        } else {
+            placeImageView.image = #imageLiteral(resourceName: "ic_place_holder")
+        }
+        
+        placeNameLabel.text = item?.title
+        placeRatingView.value = CGFloat(item?.rating ?? 0)
+        
+        placeAddressLbl.text = item?.addressTitle
+        placeAddressValueLbl.text = item?.address
+        
+        placePhoneLbl.text = item?.phoneTitle
+        placePhoneValueLbl.text = item?.phone
+        
+    
+    }
+    
+    func showStaticMapImage(_ image: UIImage?) {
+        placeMapImage.image = image
     }
     
 
