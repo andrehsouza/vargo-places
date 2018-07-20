@@ -81,6 +81,7 @@ extension FeedDetailPresenter {
             _view.showLoading(false)
             self._place = place.result
             _view.showPlaceInfo(place.result)
+            showStaticMap()
             break
         case .failure(let errorResponse):
             _view.showError(error: errorResponse, target: self, action: #selector(self._getDetail))
