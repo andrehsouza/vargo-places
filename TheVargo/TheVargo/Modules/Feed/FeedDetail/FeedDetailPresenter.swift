@@ -10,7 +10,6 @@
 
 import UIKit
 import AVKit
-import AlamofireImage
 
 final class FeedDetailPresenter {
 
