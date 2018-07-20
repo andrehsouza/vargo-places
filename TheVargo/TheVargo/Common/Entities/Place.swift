@@ -21,6 +21,11 @@ struct Place: Decodable {
     enum CodingKeys: String, CodingKey {
         case address = "formatted_address"
         case phone = "formatted_phone_number"
+        case place_id
+        case name
+        case geometry
+        case photos
+        case rating
     }
     
 }
