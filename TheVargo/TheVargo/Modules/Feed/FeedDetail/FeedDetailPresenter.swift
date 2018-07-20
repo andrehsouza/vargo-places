@@ -10,6 +10,7 @@
 
 import UIKit
 import AVKit
+import AlamofireImage
 
 final class FeedDetailPresenter {
 
@@ -54,15 +55,15 @@ extension FeedDetailPresenter: FeedDetailPresenterInterface {
 extension FeedDetailPresenter {
     
     private func showStaticMap() {
-        guard let currentLocation = LocationService.sharedInstance.locationManager.location else { return }
-        
-        let staticMapUrl: String = "http://maps.google.com/maps/api/staticmap?markers=color:red|\(currentLocation.coordinate.latitude),\(currentLocation.coordinate.longitude)&\("zoom=13&size=1800x300")&sensor=true"
-        let url = URL(string: staticMapUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-        
-        do {
-            let data = try NSData(contentsOf: url!, options: NSData.ReadingOptions())
-            _view.showStaticMapImage(UIImage(data: data as Data))
-        } catch {
+        if let urlString = VUrl.path(for: .staticMap(location: _place?.location)).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                let url = URL(string: urlString) {
+            do {
+                let data = try Data(contentsOf: url, options: NSData.ReadingOptions())
+                _view.showStaticMapImage(UIImage(data: data))
+            } catch {
+                _view.showStaticMapImage(#imageLiteral(resourceName: "ic_place_holder"))
+            }
+        } else {
             _view.showStaticMapImage(#imageLiteral(resourceName: "ic_place_holder"))
         }
     }
