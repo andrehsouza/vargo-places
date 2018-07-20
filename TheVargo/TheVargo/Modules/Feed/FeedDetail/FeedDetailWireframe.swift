@@ -18,12 +18,12 @@ final class FeedDetailWireframe: BaseWireframe {
 
     // MARK: - Module setup -
     
-    init(feedContent: FeedContent? = nil) {
+    init(placeId: String? = nil) {
         let moduleViewController = _storyboard.instantiateViewController(ofType: FeedDetailViewController.self)
         super.init(viewController: moduleViewController)
         
         let interactor = FeedDetailInteractor()
-        let presenter = FeedDetailPresenter(wireframe: self, view: moduleViewController, interactor: interactor, feedContent: feedContent)
+        let presenter = FeedDetailPresenter(wireframe: self, view: moduleViewController, interactor: interactor, placeId: placeId)
         moduleViewController.presenter = presenter
     }
 

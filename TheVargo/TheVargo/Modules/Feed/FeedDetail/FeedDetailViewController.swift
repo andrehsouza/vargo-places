@@ -11,11 +11,6 @@
 import UIKit
 import AlamofireImage
 
-enum FeedDetailLoadingType {
-    case loading
-    case error
-    case success
-}
 
 final class FeedDetailViewController: UIViewController {
     
@@ -61,25 +56,6 @@ final class FeedDetailViewController: UIViewController {
         presenter.viewDidAppear(animated: animated)
     }
     
-    @IBAction func touchPlay(_ sender: Any) {
-        presenter.didPressPlay()
-    }
-    
-    @IBAction func touchBookmark(_ sender: Any) {
-        presenter.didPressBookmark()
-    }
-    
-    @IBAction func touchShare(_ sender: Any) {
-        presenter.didPressShare()
-    }
-    
-    @IBAction func touchURL(_ sender: Any) {
-        presenter.didPressUrl()
-    }
-    
-    @IBAction func touchRetry(_ sender: Any) {
-        presenter.loadRelatedVideos()
-    }
     
 }
 
@@ -88,14 +64,7 @@ final class FeedDetailViewController: UIViewController {
 extension FeedDetailViewController {
     
     private func initialSetup() {
-        setupCollectionView()
-        presenter.viewDidLoad()
-    }
-    
-    private func setupCollectionView() {
-        collectionView.register(FeedRelatedVideoCollectionViewCell.self)
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        
     }
     
 }
@@ -104,132 +73,8 @@ extension FeedDetailViewController {
 
 extension FeedDetailViewController: FeedDetailViewInterface {
     
-    func enableNavigationBarButtons(_ enable: Bool) {
-        navigationItem.rightBarButtonItems?.forEach() { $0.isEnabled = enable }
-    }
-    
-    func scrollCollectionToFirstItem() {
-        collectionView.contentOffset.x = 0
-    }
-    
-    func reloadData() {
-        collectionView.reloadData()
-    }
-    
-    func hideRelatedVideosContainer() {
-        feedRelatedVideosContainerBottom.constant = feedRelatedVideosContainerHeight.constant
-        feedRelatedVideosContainer.isHidden = true
-    }
-    
-    func showRelatedVideosContainerAnimating(_ animating: Bool) {
-        if animating {
-            UIView.animate(withDuration: 0.6,
-                           delay: 0.0, usingSpringWithDamping: 1.0,
-                           initialSpringVelocity: 1.0,
-                           options: [.curveEaseInOut], animations: {
-                            
-                self.feedRelatedVideosContainer.isHidden = false
-                self.feedRelatedVideosContainerBottom.constant = 0
-                self.view.layoutIfNeeded()
-                            
-            }, completion: { (Bool) -> Void in
-                self.presenter.loadRelatedVideos()
-            })
-        } else {
-            self.feedRelatedVideosContainerBottom.constant = 0
-        }
-    }
-    
-    func showWaitingView(with type: FeedDetailLoadingType) {
-        switch type {
-        case .loading:
-            feedRelatedVideosLoadingLabel.text = "Loading..."
-            feedRelatedVideosLoadingLabel.isHidden = false
-            feedRelatedVideosLoadingRetryButton.isHidden = true
-            feedRelatedVideosLoadingActivityIndicator.isHidden = false
-        case .error:
-            feedRelatedVideosLoadingLabel.text = "Try again"
-            feedRelatedVideosLoadingLabel.isHidden = false
-            feedRelatedVideosLoadingRetryButton.isHidden = false
-            feedRelatedVideosLoadingActivityIndicator.isHidden = true
-        case .success:
-            feedRelatedVideosLoadingLabel.isHidden = true
-            feedRelatedVideosLoadingRetryButton.isHidden = true
-            feedRelatedVideosLoadingActivityIndicator.isHidden = true
-        }
-    }
-    
-    func setBookmarked() {
-        feedItemBookmarkButton.isSelected = !feedItemBookmarkButton.isSelected
-    }
-    
-    func showfeedContent(_ item: FeedItemDetailInterface) {
-        
-        title = item.screenTitle
-        
-        feedItemPlayerImageView.isHidden = !item.isVideo
-        
-        feedItemDateLabel.text = item.date
-        
-        if let urlString = item.imageURL, let url = URL(string: urlString) {
-            feedItemImageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "ic_place_holder"))
-        } else {
-            feedItemImageView.image = #imageLiteral(resourceName: "ic_place_holder")
-        }
-        
-        feedItemTitleLabel.text = item.title
-        feedItemDescriptionLabel.text = item.description
-        
-        feedItemAuthorsTitleLabel.text = item.authorTitle
-        feedItemAuthorsLabel.text = item.author
-        
-        feedItemFontTitleLabel.text = item.urlTitle
-        
-        if let urlDescription = item.urlDescription {
-            feedItemUrlButton.isHidden = false
-            let attText = NSMutableAttributedString(string: urlDescription, attributes: [.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
-            feedItemUrlButton.setAttributedTitle(attText, for: .normal)
-        } else {
-            feedItemUrlButton.isHidden = true
-        }
-        
-    }
-    
-}
-
-//MARK: - UICollectionViewDelegate -
-
-extension FeedDetailViewController: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter.didSelectItem(at: indexPath)
-    }
 
 }
 
-//MARK: - UICollectionViewDataSource -
 
-extension FeedDetailViewController: UICollectionViewDataSource {
-    
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return presenter.numberOfItems()
-    }
-    
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as FeedRelatedVideoCollectionViewCell
-        cell.item = presenter.item(at: indexPath)
-        return cell
-    }
-    
-}
-
-//MARK: - UICollectionViewDelegateFlowLayout -
-
-extension FeedDetailViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 110)
-    }
-    
-}
 

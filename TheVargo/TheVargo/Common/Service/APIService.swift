@@ -9,11 +9,6 @@
 import Foundation
 import Alamofire
 
-protocol ServiceProtocol {
-    associatedtype Entity where Entity: Decodable
-    func get(_ page: Int, _ completion: @escaping (RequestResultType<Entity>) -> Void)
-}
-
 final class APIService: NSObject {
     
     private var url: String?

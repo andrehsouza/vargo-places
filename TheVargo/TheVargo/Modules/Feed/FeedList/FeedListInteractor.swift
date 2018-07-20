@@ -9,6 +9,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 final class FeedListInteractor {
     
@@ -20,8 +21,8 @@ final class FeedListInteractor {
 
 extension FeedListInteractor: FeedListInteractorInterface {
     
-    func getFeeds(page: Int, completion: @escaping (RequestResultType<Feed>) -> Void) {
-        feedService.get(page, completion)
+    func getFeed(location: CLLocation, pagetoken: String, completion: @escaping (RequestResultType<Feed>) -> Void) {
+        feedService.get(location, pagetoken, completion)
     }
     
 }

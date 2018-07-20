@@ -18,39 +18,39 @@ protocol FeedDetailWireframeInterface: WireframeInterface {
 }
 
 protocol FeedDetailViewInterface: ViewInterface {
-    func reloadData()
-    func setBookmarked()
-    func showfeedContent(_ item: FeedItemDetailInterface)
-    func showWaitingView(with type: FeedDetailLoadingType)
-    func hideRelatedVideosContainer()
-    func showRelatedVideosContainerAnimating(_ animating: Bool)
-    func scrollCollectionToFirstItem()
-    func enableNavigationBarButtons(_ enable: Bool)
+//    func reloadData()
+//    func setBookmarked()
+//    func showfeedContent(_ item: FeedItemDetailInterface)
+//    func showWaitingView(with type: FeedDetailLoadingType)
+//    func hideRelatedVideosContainer()
+//    func showRelatedVideosContainerAnimating(_ animating: Bool)
+//    func scrollCollectionToFirstItem()
+//    func enableNavigationBarButtons(_ enable: Bool)
 }
 
 protocol FeedDetailPresenterInterface: PresenterInterface {
-    func setFeedDetailFromSplitViewController(_ feedContent: FeedContent)
-    func didPressPlay()
-    func didPressShare()
-    func didPressBookmark()
-    func didPressUrl()
-    func numberOfItems() -> Int
-    func item(at indexPath: IndexPath) -> FeedItemDetailInterface?
-    func didSelectItem(at indexPath: IndexPath)
-    func loadRelatedVideos()
+//    func setFeedDetailFromSplitViewController(_ feedContent: FeedContent)
+//    func didPressPlay()
+//    func didPressShare()
+//    func didPressBookmark()
+//    func didPressUrl()
+//    func numberOfItems() -> Int
+//    func item(at indexPath: IndexPath) -> FeedItemDetailInterface?
+//    func didSelectItem(at indexPath: IndexPath)
+//    func loadRelatedVideos()
 }
 
 protocol FeedDetailInteractorInterface: InteractorInterface {
-    func getRelated(page: Int, completion: @escaping (RequestResultType<[FeedContent]>) -> Void)
+//    func getRelated(page: Int, completion: @escaping (RequestResultType<[FeedContent]>) -> Void)
 }
 
-protocol FeedItemDetailInterface: FeedListItemInterface {
-    var screenTitle: String { get }
-    var authorTitle: String? { get }
-    var author: String? { get }
-    var urlTitle: String? { get }
-    var urlDescription: String? { get }
-    var url: String? { get }
-    var date: String? { get }
-    var relatedVideos: Int? { get }
-}
+//protocol FeedItemDetailInterface: FeedListItemInterface {
+//    var screenTitle: String { get }
+//    var authorTitle: String? { get }
+//    var author: String? { get }
+//    var urlTitle: String? { get }
+//    var urlDescription: String? { get }
+//    var url: String? { get }
+//    var date: String? { get }
+//    var relatedVideos: Int? { get }
+//}

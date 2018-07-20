@@ -8,13 +8,14 @@
 
 import Foundation
 import Alamofire
+import CoreLocation
 
-class FeedService: NSObject, ServiceProtocol {
+class FeedService: NSObject {
     
     typealias Entity = Feed
     
-    func get(_ page: Int, _ completion: @escaping (RequestResultType<Feed>) -> Void) {
-        let url = VUrl.path(for: .feed(page: page))
+    func get(_ location: CLLocation, _ pagetoken: String, _ completion: @escaping (RequestResultType<Feed>) -> Void) {
+        let url = VUrl.path(for: .nearbysearch(location: location, pagetoken: pagetoken))
         let service = APIService(with: url)
         service.getData(completion)
     }

@@ -34,25 +34,6 @@ final class FeedListViewController: VBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
-        
-//        placesClient = GMSPlacesClient.shared()
-//        
-//        placesClient.currentPlace(callback: { (placeLikelihoodList, error) -> Void in
-//            if let error = error {
-//                print("Pick Place error: \(error.localizedDescription)")
-//                return
-//            }
-//            
-//            debugPrint("No current place")
-//            
-//            if let placeLikelihoodList = placeLikelihoodList {
-//                let place = placeLikelihoodList.likelihoods.first?.place
-//                if let place = place {
-//                    debugPrint("Place name: \(place.name)")
-//                    debugPrint("Address: \(place.formattedAddress?.components(separatedBy: ", ").joined(separator: "\n") ?? "")")
-//                }
-//            }
-//        })
     }
     
 }

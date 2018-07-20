@@ -9,9 +9,10 @@
 //
 
 import UIKit
+import CoreLocation
 
 enum FeedListNavigationOption {
-    case detail(FeedContent)
+    case detail(String)
 }
 
 protocol FeedListWireframeInterface: WireframeInterface {
@@ -36,17 +37,16 @@ protocol FeedListPresenterInterface: PresenterInterface {
     func _loadMoreItems()
     func numberOfSections() -> Int
     func numberOrItems(in section: Int) -> Int
-    func item(at indexPath: IndexPath) -> FeedListItemInterface?
+    func item(at indexPath: IndexPath) -> PlaceItemInterface?
     func didSelectItem(at indexPath: IndexPath)
 }
 
 protocol FeedListInteractorInterface: InteractorInterface {
-    func getFeeds(page: Int, completion: @escaping (RequestResultType<Feed>) -> Void)
+    func getFeed(location: CLLocation, pagetoken: String, completion: @escaping (RequestResultType<Feed>) -> Void)
 }
 
-protocol FeedListItemInterface {
+protocol PlaceItemInterface {
     var title: String? { get }
-    var description: String? { get }
     var imageURL: String? { get }
-    var isVideo: Bool { get }
+    var rating: Float? { get }
 }

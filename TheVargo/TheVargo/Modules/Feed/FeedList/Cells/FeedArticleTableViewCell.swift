@@ -11,24 +11,19 @@ import AlamofireImage
 
 class FeedArticleTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var cellImageViewPlayer: UIImageView!
     @IBOutlet weak var cellImageView: UIImageView!
-    @IBOutlet weak var cellBookMarkButton: UIButton!
     @IBOutlet weak var cellTitleLabel: UILabel!
-    @IBOutlet weak var cellDescriptionLabel: UILabel!
     @IBOutlet weak var cellCardView: VCardView!
     
-    var item: FeedListItemInterface? {
+    var item: PlaceItemInterface? {
         didSet {
-            if let urlString = item?.imageURL, let url = URL(string: urlString) {
+            if let urlString = item?.imageURL, let url = URL(string: EndPoints.imageUrl(photoReference: urlString).complement) {
                 cellImageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "ic_place_holder"))
             } else {
                 cellImageView.image = #imageLiteral(resourceName: "ic_place_holder")
             }
             
-            cellImageViewPlayer.isHidden = !(item?.isVideo ?? false)
             cellTitleLabel.text = item?.title
-            cellDescriptionLabel.text = item?.description
         }
     }
 
@@ -38,10 +33,6 @@ class FeedArticleTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    }
-    
-    @IBAction func touchBookMark(_ sender: Any) {
-        cellBookMarkButton.isSelected = !cellBookMarkButton.isSelected
     }
     
     func setupLayout() {

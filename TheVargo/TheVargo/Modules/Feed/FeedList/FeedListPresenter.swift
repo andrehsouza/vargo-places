@@ -19,8 +19,8 @@ final class FeedListPresenter: NSObject {
     private let _interactor: FeedListInteractorInterface
     private let _wireframe: FeedListWireframeInterface
 
-    private var _isLoading: Bool = false
-    private var _feed: Feed = Feed()
+    private var _nexPageToken: String = ""
+    private var _results: [Place] = []
 
     // MARK: - Lifecycle -
 
@@ -37,10 +37,6 @@ final class FeedListPresenter: NSObject {
 
 extension FeedListPresenter: FeedListPresenterInterface {
     
-    func didBookMarkItem(at indexPath: IndexPath) {
-        //TODO save book mark
-    }
-    
     func viewDidLoad() {
         _view.showFooterLoading(false)
         _view.showLoading(true)
@@ -48,16 +44,10 @@ extension FeedListPresenter: FeedListPresenterInterface {
     }
     
     func _loadMoreItems() {
-        if _feed.page < _feed.totalPages {
-            if !_isLoading {
-                _isLoading = true
-                _interactor.getFeeds(page: (_feed.page+1), completion: { [weak self] result in
-                    self?._handleFeedResult(result)
-                })
-            }
-        } else {
-            _view.showFooterUpdatedMessage(message: "You're up to date! 🎉")
-        }
+        guard let currentLocation = LocationService.sharedInstance.locationManager.location else { return }
+        _interactor.getFeed(location: currentLocation, pagetoken: _nexPageToken, completion: { [weak self] result in
+            self?._handleFeedResult(result)
+        })
     }
     
     func numberOfSections() -> Int {
@@ -65,15 +55,15 @@ extension FeedListPresenter: FeedListPresenterInterface {
     }
     
     func numberOrItems(in section: Int) -> Int {
-        return _feed.items.count
+        return _results.count
     }
     
-    func item(at indexPath: IndexPath) -> FeedListItemInterface? {
-        return _feed.items[indexPath.row]
+    func item(at indexPath: IndexPath) -> PlaceItemInterface? {
+        return _results[indexPath.row]
     }
     
     func didSelectItem(at indexPath: IndexPath) {
-        _wireframe.navigate(to: .detail(_feed.items[indexPath.row]))
+        _wireframe.navigate(to: .detail(_results[indexPath.row].place_id))
     }
     
 }
@@ -93,7 +83,6 @@ extension FeedListPresenter {
     }
     
     private func _handleFeedResult(_ result: RequestResultType<Feed>) {
-        _isLoading = false
         switch result {
         case .success(let feed):
             incrementFeed(feed)
@@ -107,11 +96,9 @@ extension FeedListPresenter {
         }
     }
     
-    //Necessary to simulate pagination
     private func incrementFeed(_ feed: Feed) {
-        _feed.page = feed.page
-        _feed.totalPages = feed.totalPages
-        _feed.items.append(contentsOf: feed.items)
+        _nexPageToken = feed.nextPage
+        _results.append(contentsOf: feed.results)
     }
     
 }
