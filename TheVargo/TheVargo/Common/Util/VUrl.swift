@@ -23,11 +23,11 @@ enum EndPoints {
         switch self {
         case .nearbysearch(let location, let pagetoken):
             let nextPageString = !pagetoken.isEmpty ? "&pagetoken=\(pagetoken)" : ""
-            return "/nearbysearch/json?location=\(location.coordinate.latitude),\(location.coordinate.longitude)&\(SEARCH_PARAMETERS)&key=\(Constants.PLACES_API)\(nextPageString)"
+            return "/nearbysearch/json?location=\(location.coordinate.latitude),\(location.coordinate.longitude)&\(SEARCH_PARAMETERS)\(nextPageString)"
         case .imageUrl(let photoReference):
-            return "\(SERVER_URL)/photo?maxwidth=600&photoreference=\(photoReference)&key=\(Constants.PLACES_API)"
+            return "/photo?maxwidth=600&photoreference=\(photoReference)"
         case .detail(let placeId):
-            return "\(SERVER_URL)/details/json?key=\(placeId)"
+            return "/details/json?placeid=\(placeId)"
         }
     }
     
@@ -37,7 +37,7 @@ enum EndPoints {
 final class VUrl {
     
     static func path(for endPoint: EndPoints) -> String {
-        return "\(SERVER_URL)\(endPoint.complement)"
+        return "\(SERVER_URL)\(endPoint.complement)&key=\(Constants.PLACES_API)"
     }
     
 }

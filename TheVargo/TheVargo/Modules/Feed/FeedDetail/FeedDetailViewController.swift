@@ -48,7 +48,7 @@ final class FeedDetailViewController: VBaseViewController {
 extension FeedDetailViewController {
     
     private func initialSetup() {
-        
+        presenter.viewDidLoad()
     }
     
 }

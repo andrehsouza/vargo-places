@@ -19,7 +19,7 @@ class FeedArticleTableViewCell: UITableViewCell {
     
     var item: PlaceItemInterface? {
         didSet {
-            if let urlString = item?.imageURL, let url = URL(string: EndPoints.imageUrl(photoReference: urlString).complement) {
+            if let urlString = item?.imageURL, let url = URL(string: VUrl.path(for: .imageUrl(photoReference: urlString))) {
                 cellImageView.af_setImage(withURL: url, placeholderImage: #imageLiteral(resourceName: "ic_place_holder"))
             } else {
                 cellImageView.image = #imageLiteral(resourceName: "ic_place_holder")
