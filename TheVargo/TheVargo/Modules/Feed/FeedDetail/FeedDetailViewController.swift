@@ -41,12 +41,6 @@ final class FeedDetailViewController: VBaseViewController {
         initialSetup()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        presenter.viewDidAppear(animated: animated)
-    }
-    
-    
 }
 
 // MARK: - Functions -
