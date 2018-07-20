@@ -1,6 +1,6 @@
-# Vargo - Videos & Articles
+# Vargo - Places.
 
-A challenge that consists of build an app about articles and videos.
+A challenge that consists of developing an app to fetch places from Google Places API
 
 ## Using
 
@@ -9,7 +9,7 @@ A challenge that consists of build an app about articles and videos.
 * CocoaPods
 * Viper
 * Alamofire
-* Google Places
+* Google Places API
 
 
 ## Authors
